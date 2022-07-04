@@ -1,0 +1,15 @@
+# Copyright 2021 The Cloudbases Authors. All rights reserved.
+# Use of this source code is governed by a Apache license
+# that can be found in the LICENSE file.
+
+language: go
+
+go:
+- '1.11'
+- 'tip'
+
+go_import_path: cloudbases.io/logger
+
+script:
+- env GO111MODULE=on go test ./...
+- env GO111MODULE=on go vet ./...
